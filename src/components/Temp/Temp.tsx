@@ -1,7 +1,7 @@
 import React from 'react';
 import './Temp.css';
 
-const Temp: React.FC<TempProps> = ({ minTemp, maxTemp }) => {
+export const Temp: React.FC<TempProps> = ({ minTemp, maxTemp }) => {
   return (
     <div className='Temp'>
       <span className='min'>{minTemp}&#176;</span>
@@ -9,5 +9,3 @@ const Temp: React.FC<TempProps> = ({ minTemp, maxTemp }) => {
     </div>
   );
 };
-
-export default Temp;

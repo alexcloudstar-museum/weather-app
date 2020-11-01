@@ -6,27 +6,43 @@ import Snowing from '../../assets/snowing.svg';
 import Sun from '../../assets/sun.svg';
 import Thermometer from '../../assets/thermometer.svg';
 
-type IconProps = {
-  icon: string;
-};
-
-const Icon = ({ icon }: IconProps) => {
+export const Icon: React.FC<IconProps> = ({ icon }) => {
   switch (icon) {
-    case 'Cloudy':
+    case 801:
       return <img className='icon' src={Cloudy} alt={Cloudy} />;
       break;
-    case 'Rain':
+    case 802:
+      return <img className='icon' src={Cloudy} alt={Cloudy} />;
+      break;
+    case 803:
+      return <img className='icon' src={Cloudy} alt={Cloudy} />;
+      break;
+    case 200:
       return <img className='icon' src={Rain} alt={Rain} />;
       break;
-    case 'Sun':
-      return <img className='icon' src={Sun} alt={Sun} />;
+    case 201:
+      return <img className='icon' src={Rain} alt={Rain} />;
       break;
-    case 'Snowing':
+    case 202:
+      return <img className='icon' src={Rain} alt={Rain} />;
+      break;
+    case 600:
+      return <img className='icon' src={Snowing} alt={Snowing} />;
+      break;
+    case 601:
+      return <img className='icon' src={Snowing} alt={Snowing} />;
+      break;
+    case 602:
+      return <img className='icon' src={Snowing} alt={Snowing} />;
+      break;
+    case 610:
       return <img className='icon' src={Snowing} alt={Snowing} />;
       break;
     default:
-      return <img className='icon' src={Thermometer} alt={Thermometer} />;
+      return (
+        <React.Fragment>
+          <img className='icon' src={Thermometer} alt={Thermometer} />
+        </React.Fragment>
+      );
   }
 };
-
-export default Icon;

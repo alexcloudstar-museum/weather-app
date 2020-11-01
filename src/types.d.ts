@@ -11,7 +11,7 @@ type TempProps = {
 };
 
 type IconProps = {
-  icon: string;
+  icon: number;
 };
 
 type DaysProps = {
