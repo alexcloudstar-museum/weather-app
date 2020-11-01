@@ -1,7 +1,6 @@
 type SearchBarProps = {
   city: string;
   searchCity: (city: string) => Promise<void>;
-  loading: boolean;
 };
 
 type TempProps = {
