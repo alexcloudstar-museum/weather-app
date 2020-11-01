@@ -1,9 +1,11 @@
 import React from 'react';
-import './Days.css';
-import { DaysProps } from '../../types';
+import styled from 'styled-components';
 
-const Days: React.FC<DaysProps> = ({ day }) => {
-  return <div className='Days'>{day}</div>;
+const DaysWrapper = styled.div`
+  color: #b8b8b8;
+  margin: 15px 0;
+`;
+
+export const Days: React.FC<DaysProps> = ({ day }) => {
+  return <DaysWrapper>{day}</DaysWrapper>;
 };
-
-export default Days;
