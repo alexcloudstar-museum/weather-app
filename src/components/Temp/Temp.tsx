@@ -1,6 +1,5 @@
 import React from 'react';
 import './Temp.css';
-import { TempProps } from '../../types/';
 
 const Temp: React.FC<TempProps> = ({ minTemp, maxTemp }) => {
   return (

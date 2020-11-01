@@ -10,12 +10,13 @@ const WeatherBody: React.FC<WeatherBodyProps> = ({
   icon,
   minTemp,
   maxTemp,
+  description,
 }) => {
   return (
     <div className='WeatherBody card'>
       <Days day={day} />
       <Icon icon={icon} />
-      <Temp minTemp={minTemp} maxTemp={maxTemp} />
+      <Temp minTemp={minTemp} maxTemp={maxTemp} description={description} />
     </div>
   );
 };
