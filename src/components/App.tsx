@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import './App.css';
 import API from '../api';
+import { SearchBar } from './SearchBar';
 import WeatherBody from './WeatherBody/WeatherBody';
 
 const App = () => {
@@ -8,6 +10,7 @@ const App = () => {
   const [loading, setLoading] = useState<boolean>(true);
 
   const searchCity = async (city: string) => {
+    setLoading(true);
     await API.get(
       `daily?city=${city}&key=3883f69ab25f46dc92cdf2b5d66a1517`
     ).then(res => {
@@ -18,9 +21,9 @@ const App = () => {
   };
 
   useEffect(() => {
-    searchCity('Iasi');
+    searchCity(city);
     setLoading(false);
-  }, []);
+  }, [city]);
 
   const minTemp =
     temp &&
@@ -52,7 +55,9 @@ const App = () => {
         <div>loading....</div>
       ) : (
         <div className='App'>
-          {/* <React.Fragment></React.Fragment> */}
+          <React.Fragment>
+            <SearchBar city={city} searchCity={searchCity} loading={loading} />
+          </React.Fragment>
           <div className='weatherContainer pt-3 pb-3'>
             <WeatherBody
               day={'Mon'}

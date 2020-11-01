@@ -1,16 +1,21 @@
 import React, { useState } from 'react';
 import './index.css';
 
-export const SearchBar: React.FC<SearchBarProps> = ({ city, searchCity }) => {
-  const [value, setValue] = useState();
+export const SearchBar: React.FC<SearchBarProps> = ({
+  city,
+  searchCity,
+  loading,
+}) => {
+  const [value, setValue] = useState(city);
+
+  const onChange = (e: any) => {
+    setValue(e.target.value);
+  };
 
   const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    alert('Hello world');
-    // city === '' ? alert('City can not be empty') : searchCity(city);
+    value === '' ? alert('City can not be empty') : searchCity(value);
   };
-
-  const onChange = (e: any) => setValue(e.target.value);
 
   return (
     <div className='SearchBar'>
