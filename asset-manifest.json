@@ -1,28 +1,22 @@
 {
   "files": {
-    "main.css": "/weather-app/static/css/main.38c8d81e.chunk.css",
-    "main.js": "/weather-app/static/js/main.05c8badf.chunk.js",
-    "main.js.map": "/weather-app/static/js/main.05c8badf.chunk.js.map",
-    "runtime-main.js": "/weather-app/static/js/runtime-main.36d91d67.js",
-    "runtime-main.js.map": "/weather-app/static/js/runtime-main.36d91d67.js.map",
-    "static/js/2.fcfe1e17.chunk.js": "/weather-app/static/js/2.fcfe1e17.chunk.js",
-    "static/js/2.fcfe1e17.chunk.js.map": "/weather-app/static/js/2.fcfe1e17.chunk.js.map",
+    "main.js": "/weather-app/static/js/main.5bfb46a4.chunk.js",
+    "main.js.map": "/weather-app/static/js/main.5bfb46a4.chunk.js.map",
+    "runtime-main.js": "/weather-app/static/js/runtime-main.ebee7970.js",
+    "runtime-main.js.map": "/weather-app/static/js/runtime-main.ebee7970.js.map",
+    "static/js/2.c1479779.chunk.js": "/weather-app/static/js/2.c1479779.chunk.js",
+    "static/js/2.c1479779.chunk.js.map": "/weather-app/static/js/2.c1479779.chunk.js.map",
     "index.html": "/weather-app/index.html",
-    "precache-manifest.ec1390e47f7f12ac2afaa7cc982719ce.js": "/weather-app/precache-manifest.ec1390e47f7f12ac2afaa7cc982719ce.js",
-    "service-worker.js": "/weather-app/service-worker.js",
-    "static/css/main.38c8d81e.chunk.css.map": "/weather-app/static/css/main.38c8d81e.chunk.css.map",
-    "static/js/2.fcfe1e17.chunk.js.LICENSE.txt": "/weather-app/static/js/2.fcfe1e17.chunk.js.LICENSE.txt",
-    "static/media/Spinner.gif": "/weather-app/static/media/Spinner.032bf6d9.gif",
-    "static/media/cloudy.svg": "/weather-app/static/media/cloudy.cfb1e955.svg",
-    "static/media/rain.svg": "/weather-app/static/media/rain.5ee170bc.svg",
-    "static/media/snowing.svg": "/weather-app/static/media/snowing.5831cc74.svg",
-    "static/media/sun.svg": "/weather-app/static/media/sun.ef790a4b.svg",
-    "static/media/thermometer.svg": "/weather-app/static/media/thermometer.c25afb20.svg"
+    "static/js/2.c1479779.chunk.js.LICENSE.txt": "/weather-app/static/js/2.c1479779.chunk.js.LICENSE.txt",
+    "static/media/Spinner.0f8e3ead.gif": "/weather-app/static/media/Spinner.0f8e3ead.gif",
+    "static/media/cloudy.75e6c850.svg": "/weather-app/static/media/cloudy.75e6c850.svg",
+    "static/media/rain.de11ad59.svg": "/weather-app/static/media/rain.de11ad59.svg",
+    "static/media/snowing.80eba8a2.svg": "/weather-app/static/media/snowing.80eba8a2.svg",
+    "static/media/thermometer.194aaa54.svg": "/weather-app/static/media/thermometer.194aaa54.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.36d91d67.js",
-    "static/js/2.fcfe1e17.chunk.js",
-    "static/css/main.38c8d81e.chunk.css",
-    "static/js/main.05c8badf.chunk.js"
+    "static/js/runtime-main.ebee7970.js",
+    "static/js/2.c1479779.chunk.js",
+    "static/js/main.5bfb46a4.chunk.js"
   ]
 }
