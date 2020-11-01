@@ -3,7 +3,6 @@ import './WeatherBody.css';
 import Days from '../Days/Days';
 import Icon from '../Icon/Icon';
 import Temp from '../Temp/Temp';
-import { WeatherBodyProps } from '../../types/';
 
 const WeatherBody: React.FC<WeatherBodyProps> = ({
   day,

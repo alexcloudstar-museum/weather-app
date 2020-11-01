@@ -4,9 +4,10 @@ import './index.css';
 export const SearchBar: React.FC<SearchBarProps> = ({ city, searchCity }) => {
   const [value, setValue] = useState();
 
-  const onSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    city === '' ? alert('City can not be empty') : searchCity(city);
+    alert('Hello world');
+    // city === '' ? alert('City can not be empty') : searchCity(city);
   };
 
   const onChange = (e: any) => setValue(e.target.value);
@@ -16,7 +17,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({ city, searchCity }) => {
       <div className='SearchBarChilds'>
         <h5 className='text-white'>Search weather on your city</h5>
 
-        <form onSubmit={onSubmit}>
+        <form onSubmit={handleFormSubmit}>
           <input
             type='text'
             name='city'
