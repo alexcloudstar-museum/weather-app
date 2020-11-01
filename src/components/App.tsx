@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import GlobalStyles from '../globalStyles';
 import './App.css';
 import API from '../api';
 import { SearchBar } from './SearchBar';
@@ -40,18 +41,19 @@ const App = () => {
 
   const icon =
     temp &&
-    temp.map((t: any) => {
+    temp.map((t: any): number => {
       return t.weather.code;
     });
 
   const description =
     temp &&
-    temp.map((t: any) => {
+    temp.map((t: any): string => {
       return t.weather.description;
     });
 
   return (
     <>
+      <GlobalStyles />
       {loading ? (
         <div>
           <Loader message={'Loading data...'} />
