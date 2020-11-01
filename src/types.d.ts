@@ -18,4 +18,8 @@ type DaysProps = {
   day: string;
 };
 
+type LoaderProps = {
+  message: string;
+};
+
 type WeatherBodyProps = TempProps & IconProps & DaysProps;

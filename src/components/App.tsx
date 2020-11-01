@@ -3,6 +3,7 @@ import './App.css';
 import API from '../api';
 import { SearchBar } from './SearchBar';
 import WeatherBody from './WeatherBody/WeatherBody';
+import { Loader } from './Loader';
 
 const App = () => {
   const [temp, setTemp] = useState<TempProps[]>([]);
@@ -52,13 +53,16 @@ const App = () => {
   return (
     <>
       {loading ? (
-        <div>loading....</div>
+        <div>
+          <Loader message={'Loading data...'} />
+        </div>
       ) : (
         <div className='App'>
           <React.Fragment>
             <SearchBar city={city} searchCity={searchCity} loading={loading} />
           </React.Fragment>
           <div className='weatherContainer pt-3 pb-3'>
+            {city && <h5 className='cityName'>{city}</h5>}
             <WeatherBody
               day={'Mon'}
               icon={icon[0]}
