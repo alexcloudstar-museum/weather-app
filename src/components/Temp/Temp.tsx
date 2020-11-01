@@ -1,11 +1,14 @@
-import React from 'react'
-import './Temp.css'
+import React from 'react';
+import './Temp.css';
+import { TempProps } from '../../types/';
 
-const Temp = props => {
-    return <div className="Temp">
-        <span className="min">{props.minTemp}&#176;</span>
-        <span className="max">{props.maxTemp}&#176;</span>
+const Temp: React.FC<TempProps> = ({ minTemp, maxTemp }) => {
+  return (
+    <div className='Temp'>
+      <span className='min'>{minTemp}&#176;</span>
+      <span className='max'>{maxTemp}&#176;</span>
     </div>
-}
+  );
+};
 
 export default Temp;
