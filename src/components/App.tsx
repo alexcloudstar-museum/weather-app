@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 // libs
 import styled from 'styled-components';
@@ -90,7 +90,6 @@ const App = () => {
           </React.Fragment>
           <WeatherContainer city={city} className='pt-3 pb-3'>
             {city && <h5 className='cityName'>{city}</h5>}
-            {weatherData && weatherData.map(w => console.log(w))}
             {weatherData &&
               weatherData.map(weather => {
                 return (
@@ -100,6 +99,7 @@ const App = () => {
                     minTemp={weather.min_temp}
                     maxTemp={weather.max_temp}
                     description={weather.description}
+                    key={weather.datetime}
                   />
                 );
               })}
