@@ -14,7 +14,7 @@ type IconProps = {
 };
 
 type DaysProps = {
-  day: string;
+  day: any;
 };
 
 type LoaderProps = {

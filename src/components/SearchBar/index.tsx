@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const SearchBarWrapper = styled.div<SearchBarProps>`
   width: 100%;
-  height: 30vh;
+  height: ${props => (props.city ? '30vh' : '100vh')};
   text-align: center;
   background-image: url('https://images.unsplash.com/photo-1559060017-445fb9722f2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80');
   background-position: center;
