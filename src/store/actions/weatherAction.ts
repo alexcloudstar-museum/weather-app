@@ -10,7 +10,7 @@ export const getWeather = (
   return async dispatch => {
     try {
       const res = await api.get(
-        `daily?days=5&city=${city}&key=3883f69ab25f46dc92cdf2b5d66a1517`
+        `daily?days=5&city=${city}&key=${process.env.REACT_APP_WEATHER_API}`
       );
 
       const resData: Weather[] = await res.data.data;
