@@ -2,7 +2,7 @@ import { FC, useState, ChangeEvent, FormEvent } from 'react';
 import { SearchBarWrapper } from './style';
 import { SearchBarProps } from './types';
 
-export const SearchBar: FC<SearchBarProps> = ({ city, searchCity }) => {
+const SearchBar: FC<SearchBarProps> = ({ city, searchCity }) => {
   const [value, setValue] = useState(city);
 
   const onChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -38,3 +38,5 @@ export const SearchBar: FC<SearchBarProps> = ({ city, searchCity }) => {
     </SearchBarWrapper>
   );
 };
+
+export default SearchBar;
