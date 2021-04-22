@@ -1,8 +1,5 @@
-import { PropsWithChildren, ReactNode } from 'react';
-
 interface IconCodeProps {
-  iconCode: number;
-  iconElement?: PropsWithChildren<IconCodeProps> | ReactNode;
+  iconCode: any;
 }
 
 export default IconCodeProps;

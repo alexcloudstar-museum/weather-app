@@ -1,4 +1,4 @@
-import { DaysProps } from 'shared/components/days/types';
+import { DaysProps } from 'shared/components/Days/types';
 import { TempProps } from 'shared/components/Temp/types';
 import IconCodeProps from 'utils/renderIcon/types';
 
