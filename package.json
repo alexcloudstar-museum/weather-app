@@ -1,7 +1,7 @@
 {
   "name": "weather-app",
   "homepage": "https://alexcloudstar.github.io/weather-app/",
-  "version": "0.1.57",
+  "version": "0.1.61",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.21.1",
