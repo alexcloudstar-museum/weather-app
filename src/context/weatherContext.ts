@@ -1,18 +1,14 @@
-import { createContext, useContext } from 'react';
+import { WeatherContextParams } from 'context';
+import { createContext, SetStateAction, useContext } from 'react';
 
 export type WeatherContextType = {
-  weather: {
-    datetime: string;
-    weather: { code: number; description: string };
-    min_temp: number;
-    max_temp: number;
-  }[];
-  setWeather: (params: any) => void;
+  weather: WeatherContextParams[] | [];
+  setWeather: (value: SetStateAction<WeatherContextParams[]>) => void;
 };
 
 export const WeatherContext = createContext<WeatherContextType>({
   weather: [],
-  setWeather: (params: any) => {},
+  setWeather: (value: SetStateAction<WeatherContextParams[]>) => {},
 });
 
 export const useWeatherContext = () => useContext(WeatherContext);
