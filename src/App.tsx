@@ -1,48 +1,33 @@
+import { FC, useEffect, useState } from 'react';
+import { WeatherContext } from 'context/weatherContext';
 import GlobalStyle from 'globalStyles';
-import { FC } from 'react';
-import { WeatherBody } from 'shared';
+import { weatherService } from 'services';
+import { SearchBar, WeatherContainer } from 'shared';
 
-const App: FC = () => (
-  <div className='App'>
-    <div className='weatherContainer pt-3 pb-3'>
+const App: FC = () => {
+  const [city, setCity] = useState('');
+  const [weather, setWeather] = useState<[]>([]);
+
+  useEffect(() => {
+    (async () => {
+      const weather = await weatherService(city);
+      setWeather(weather);
+    })();
+  }, [city]);
+
+  const searchCity = async (city: string) => {
+    setCity(city);
+  };
+
+  return (
+    <WeatherContext.Provider value={{ weather, setWeather }}>
       <GlobalStyle />
-      <WeatherBody
-        day='Mon'
-        iconCode={801}
-        minTemp={15}
-        maxTemp={25}
-        description='Lorem ipsum'
-      />
-      <WeatherBody
-        day='Tue'
-        iconCode={803}
-        minTemp={5}
-        maxTemp={10}
-        description='Lorem ipsum'
-      />
-      <WeatherBody
-        day='Wed'
-        iconCode={801}
-        minTemp={0}
-        maxTemp={-5}
-        description='Lorem ipsum'
-      />
-      <WeatherBody
-        day='Thu'
-        iconCode={801}
-        minTemp={12}
-        maxTemp={14}
-        description='Lorem ipsum'
-      />
-      <WeatherBody
-        day='Fri'
-        iconCode={801}
-        minTemp={-10}
-        maxTemp={-22}
-        description='Lorem ipsum'
-      />
-    </div>
-  </div>
-);
+      <div className='App'>
+        <SearchBar city={city} searchCity={searchCity} />
+        <WeatherContainer city={city} />
+      </div>
+    </WeatherContext.Provider>
+  );
+};
 
 export default App;

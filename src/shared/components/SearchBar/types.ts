@@ -1,4 +1,4 @@
 export interface SearchBarProps {
   city: string;
-  searchCity: (city: string) => Promise<void>;
+  searchCity: (city: string) => void;
 }

@@ -1,0 +1,1 @@
+export { useWeatherContext } from './weatherContext';
